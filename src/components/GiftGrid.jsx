@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react'
 import {GiftItem} from './GiftItem';
 import {useFetchGifts} from '../hooks/useFetchGifts'
+import proptypes from 'prop-types';
 
 export const GiftGrid=({category})=> {
   
@@ -34,3 +35,6 @@ console.log ("Here category",category)
       )
 }
 
+GiftGrid.proptypes={
+    category:proptypes.string.isRequired
+}
